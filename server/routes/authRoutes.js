@@ -1,15 +1,22 @@
 const express = require("express");
+const {
+  registerUser,
+  loginUser,
+  getUserProfile,
+  updateUserProfile,
+  forgotPassword,
+  resetPassword,
+} = require("../controllers/authController");
+const { protect } = require("../middleware/authMiddleware");
+const upload = require("../middleware/uploadMiddleware");
 
 const router = express.Router();
 
-// Register Route
-router.post("/register", (req, res) => {
-  res.json({ message: "Register route is working" });
-});
-
-// Login Route
-router.post("/login", (req, res) => {
-  res.json({ message: "Login route is working" });
-});
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.get("/profile", protect, getUserProfile);
+router.put("/profile", protect, upload.single("profileImage"), updateUserProfile);
+router.post("/forgot-password", forgotPassword);
+router.post("/reset-password", resetPassword);
 
 module.exports = router;
