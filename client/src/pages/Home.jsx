@@ -76,7 +76,7 @@ function Home() {
                   <div className="space-y-3 mt-4 text-sm">
                     <div className="flex justify-between">
                       <span className="text-slate-500 dark:text-slate-400">Monday - Friday</span>
-                      <span className="font-semibold text-slate-700 dark:text-slate-200">08:00 AM - 08:00 PM</span>
+                      <span className="font-semibold text-slate-700 dark:text-slate-200">09:00 AM - 07:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-slate-500 dark:text-slate-400">Saturday</span>
@@ -90,7 +90,7 @@ function Home() {
                   
                   <div className="mt-6 p-4 rounded-xl bg-sky-50 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/40 text-center">
                     <p className="text-xs text-slate-500 dark:text-slate-400">Need Immediate Advice?</p>
-                    <p className="text-lg font-bold text-sky-600 dark:text-sky-400 mt-1">+1 800-CARE-SYNC</p>
+                    <p className="text-lg font-bold text-sky-600 dark:text-sky-400 mt-1">+91 9514063498</p>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ function Home() {
                 <FiUsers className="w-8 h-8" />
               </div>
               <div>
-                <p className="text-3xl font-extrabold text-slate-900 dark:text-white">10k+</p>
+                <p className="text-3xl font-extrabold text-slate-900 dark:text-white">1k+</p>
                 <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Happy Patients Serviced</p>
               </div>
             </div>
@@ -118,7 +118,7 @@ function Home() {
                 <FiAward className="w-8 h-8" />
               </div>
               <div>
-                <p className="text-3xl font-extrabold text-slate-900 dark:text-white">50+</p>
+                <p className="text-3xl font-extrabold text-slate-900 dark:text-white">10+</p>
                 <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Specialist Clinicians</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ function Home() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Our Departments</h2>
             <p className="mt-4 text-base text-slate-500 dark:text-slate-400">
-              Select a specialized field to browse certified doctors, view consultation schedules, and book direct appointments.
+              Select a specialized field to browse certified doctors, view consultation schedules, and quick book direct appointments.
             </p>
           </div>
 
