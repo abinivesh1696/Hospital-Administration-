@@ -29,9 +29,9 @@ function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white">About CareSync</h1>
+            <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white">About SmartCare HMS</h1>
             <p className="mt-4 text-lg text-slate-500 dark:text-slate-400">
-              We bridge the gap between patients and specialized clinicians, providing a seamless digital environment for scheduling consultation checkups.
+              <h2 className="font-bold"> Hospital Management System  </h2> We bridge the gap between patients and specialized clinicians, providing a seamless digital environment for scheduling consultation checkups.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ function About() {
                 Redefining Patient-Doctor Collaboration
               </h2>
               <p className="text-slate-550 dark:text-slate-400 leading-relaxed mb-4">
-                Founded in 2026, CareSync operates as an all-in-one patient reservation platform, hosting clinical records, available day-slot scheduling, and instant prescription downloads.
+                Founded in 2026, SmartCare HMS (Hospital Management System) operates as an all-in-one patient reservation platform, hosting clinical records, available day-slot scheduling, and instant prescription downloads.
               </p>
               <p className="text-slate-550 dark:text-slate-400 leading-relaxed">
                 Whether you need general advice, cardiovascular inspections, skin consultations, or pediatric help, our system ensures you match with the right doctors and get approved slots in minutes.
@@ -58,7 +58,7 @@ function About() {
                 <div className="w-10 h-10 bg-sky-100 dark:bg-sky-950 rounded-full flex items-center justify-center text-sky-600 font-bold">CS</div>
                 <div>
                   <span className="font-semibold text-slate-850 dark:text-slate-200 block text-sm">Medical Board Panel</span>
-                  <span className="text-xs text-slate-400">CareSync Health Organization</span>
+                  <span className="text-xs text-slate-400">SmartCare HMS</span>
                 </div>
               </div>
             </div>

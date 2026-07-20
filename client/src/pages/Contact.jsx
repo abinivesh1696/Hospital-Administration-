@@ -43,8 +43,8 @@ function Contact() {
                 </div>
                 <div>
                   <span className="text-xs font-semibold text-slate-400 uppercase block">Email Support</span>
-                  <a href="mailto:support@caresync.com" className="text-sm font-bold text-slate-800 dark:text-slate-200 hover:text-sky-600">
-                    support@caresync.com
+                  <a href="mailto:support@smartcarehms.com" className="text-sm font-bold text-slate-800 dark:text-slate-200 hover:text-sky-600">
+                    support@smartcarehms.com
                   </a>
                 </div>
               </div>

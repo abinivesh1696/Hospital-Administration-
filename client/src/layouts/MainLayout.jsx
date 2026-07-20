@@ -15,7 +15,7 @@ function MainLayout({ children }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div>
-              <span className="text-lg font-bold text-sky-600 dark:text-sky-400">🏥 CareSync</span>
+              <span className="text-lg font-bold text-sky-600 dark:text-sky-400">🏥 SmartCare HMS</span>
               <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
                 Modern Hospital Appointment & Doctor Consultation Portal.
               </p>
@@ -28,7 +28,7 @@ function MainLayout({ children }) {
             </div>
           </div>
           <div className="mt-8 border-t border-slate-150 dark:border-slate-850 pt-4 text-center text-xs text-slate-400 dark:text-slate-500">
-            &copy; {new Date().getFullYear()} CareSync. All rights reserved. Made for patient-doctor healthcare convenience.
+            &copy; {new Date().getFullYear()} SmartCare HMS. All rights reserved. Made for patient-doctor healthcare convenience.
           </div>
         </div>
       </footer>

@@ -31,7 +31,7 @@ function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="text-xl font-bold text-sky-600 dark:text-sky-400 flex items-center space-x-2">
               <span className="text-2xl">🏥</span>
-              <span className="hidden sm:inline">CareSync</span>
+              <span className="hidden sm:inline">SmartCare HMS</span>
             </Link>
           </div>
 

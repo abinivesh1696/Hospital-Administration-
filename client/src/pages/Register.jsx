@@ -58,7 +58,7 @@ function Register() {
         toast.success("Registration success! Doctors must wait for Administrator approval before logging in.");
         setTimeout(() => navigate("/login"), 3000);
       } else {
-        toast.success("Registration success! Welcome to CareSync.");
+        toast.success("Registration success! Welcome to SmartCare HMS.");
         setTimeout(() => navigate("/dashboard"), 1000);
       }
     } catch (err) {
@@ -80,7 +80,7 @@ function Register() {
               Create Account
             </h2>
             <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-              Join CareSync to schedule consultations and view clinical prescriptions.
+              Join SmartCare HMS to schedule consultations and view clinical prescriptions.
             </p>
 
             {/* Toggle Role Selector */}
