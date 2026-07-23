@@ -56,7 +56,7 @@ function Contact() {
                 <div>
                   <span className="text-xs font-semibold text-slate-400 uppercase block">Helpline Phone</span>
                   <a href="tel:+18005550190" className="text-sm font-bold text-slate-800 dark:text-slate-200 hover:text-emerald-600">
-                    +1 (800) 555-0190
+                    +91 8248633996
                   </a>
                 </div>
               </div>
@@ -68,7 +68,10 @@ function Contact() {
                 <div>
                   <span className="text-xs font-semibold text-slate-400 uppercase block">HQ Clinic Address</span>
                   <span className="text-sm font-bold text-slate-800 dark:text-slate-200">
-                    100 Medical Center Parkway, NY
+                    123 Health Avenue, Chennai, Tamil Nadu, India
+                  </span>
+                </div>
+              </div>
                   </span>
                 </div>
               </div>
