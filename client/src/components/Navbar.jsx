@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
+import { getServerBaseUrl } from "../utils/apiBase";
 import { FiSun, FiMoon, FiMenu, FiX, FiLogOut, FiUser } from "react-icons/fi";
 
 function Navbar() {
@@ -68,7 +69,7 @@ function Navbar() {
                 >
                   {user.profileImage ? (
                     <img
-                      src={`http://localhost:5000${user.profileImage}`}
+                      src={`${getServerBaseUrl()}${user.profileImage}`}
                       alt="avatar"
                       className="w-8 h-8 rounded-full object-cover border border-sky-200 dark:border-sky-800"
                       onError={(e) => {
@@ -188,7 +189,7 @@ function Navbar() {
                 >
                   {user.profileImage ? (
                     <img
-                      src={`http://localhost:5000${user.profileImage}`}
+                      src={`${getServerBaseUrl()}${user.profileImage}`}
                       alt="avatar"
                       className="w-10 h-10 rounded-full object-cover border border-sky-200"
                       onError={(e) => {

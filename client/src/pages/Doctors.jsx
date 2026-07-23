@@ -164,7 +164,7 @@ function Doctors() {
                     <div className="flex items-center space-x-4 mb-4">
                       {doc.userId?.profileImage ? (
                         <img
-                          src={`http://localhost:5000${doc.userId.profileImage}`}
+                          src={`${import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api$/, "") : "http://localhost:5000"}${doc.userId.profileImage}`}
                           alt={doc.userId.name}
                           className="w-16 h-16 rounded-full object-cover border border-sky-100"
                           onError={(e) => {

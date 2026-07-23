@@ -98,7 +98,7 @@ function DoctorDetails() {
                 <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-4 sm:space-y-0 sm:space-x-6 pb-6 border-b border-slate-100 dark:border-slate-700">
                   {doctor.userId?.profileImage ? (
                     <img
-                      src={`http://localhost:5000${doctor.userId.profileImage}`}
+                      src={`${import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api$/, "") : "http://localhost:5000"}${doctor.userId.profileImage}`}
                       alt={doctor.userId.name}
                       className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-sky-100 dark:border-slate-700"
                       onError={(e) => {

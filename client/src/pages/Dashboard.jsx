@@ -766,7 +766,7 @@ function Dashboard() {
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 pb-6 border-b border-slate-100 dark:border-slate-800 mb-6">
               {user.profileImage ? (
                 <img
-                  src={`http://localhost:5000${user.profileImage}`}
+                  src={`${import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api$/, "") : "http://localhost:5000"}${user.profileImage}`}
                   alt="avatar"
                   className="w-20 h-20 rounded-2xl object-cover border-2 border-sky-100"
                   onError={(e) => {
