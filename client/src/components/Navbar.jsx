@@ -39,7 +39,7 @@ function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-4 items-center">
             <Link to="/" className={navLinkClass("/")}>Home</Link>
-            <Link to="/doctors" className={navLinkClass("/doctors")}>Find Doctors</Link>
+            <Link to={user ? "/doctors" : "/login"} className={navLinkClass("/doctors")}>Find Doctors</Link>
             <Link to="/services" className={navLinkClass("/services")}>Services</Link>
             <Link to="/about" className={navLinkClass("/about")}>About</Link>
             <Link to="/contact" className={navLinkClass("/contact")}>Contact</Link>
@@ -142,7 +142,7 @@ function Navbar() {
               Home
             </Link>
             <Link
-              to="/doctors"
+              to={user ? "/doctors" : "/login"}
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
             >

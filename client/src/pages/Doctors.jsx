@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import api from "../services/api";
-import { FiSearch, FiMapPin, FiClock, FiDollarSign } from "react-icons/fi";
+import { FiSearch, FiMapPin, FiClock, FiDollarSign, FiCalendar, FiBriefcase } from "react-icons/fi";
 
 function Doctors() {
   const [doctors, setDoctors] = useState([]);
@@ -37,8 +37,8 @@ function Doctors() {
         if (search) queryParams.append("search", search);
         if (spec) queryParams.append("specialization", spec);
         
-        // Only approved doctors for public view
-        queryParams.append("approved", "true");
+        // Logged-in find-doctor flow should show all added doctors.
+        queryParams.append("approved", "all");
 
         const { data } = await api.get(`/doctors?${queryParams.toString()}`);
         setDoctors(data);
@@ -87,9 +87,9 @@ function Doctors() {
       <div className="py-12 bg-white dark:bg-slate-900 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center sm:text-left">
-            <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">Certified Specialists</h1>
+            <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">Find Doctors</h1>
             <p className="mt-2 text-slate-500 dark:text-slate-400">
-              Browse qualified physicians, select filters, and book consultation timings.
+              Browse qualified physicians, review their full details and fee, then book consultation timings.
             </p>
           </div>
 
@@ -181,9 +181,16 @@ function Doctors() {
                         <h3 className="font-bold text-lg text-slate-900 dark:text-white leading-tight">
                           {doc.userId?.name || "Dr. Staff"}
                         </h3>
-                        <span className="inline-block mt-1 text-xs font-semibold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/40 px-2.5 py-0.5 rounded-full">
-                          {doc.specialization}
-                        </span>
+                        <div className="mt-1 flex items-center gap-2 flex-wrap">
+                          <span className="inline-block text-xs font-semibold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/40 px-2.5 py-0.5 rounded-full">
+                            {doc.specialization}
+                          </span>
+                          {!doc.approved && (
+                            <span className="inline-block text-[11px] font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/40 px-2.5 py-0.5 rounded-full">
+                              Pending Approval
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
 
@@ -198,12 +205,20 @@ function Doctors() {
                     {/* Metadata specs */}
                     <div className="space-y-2 border-t border-slate-100 dark:border-slate-700 pt-4 text-xs text-slate-500 dark:text-slate-400">
                       <div className="flex items-center space-x-2">
+                        <FiBriefcase className="text-slate-400 shrink-0" />
+                        <span>{doc.experience} years experience</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
                         <FiMapPin className="text-slate-400 shrink-0" />
                         <span className="truncate">{doc.hospital}</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <FiClock className="text-slate-400 shrink-0" />
                         <span>{doc.availableTime}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <FiCalendar className="text-slate-400 shrink-0" />
+                        <span className="truncate">{doc.availableDays?.join(", ") || "Availability not updated"}</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <FiDollarSign className="text-slate-400 shrink-0" />
@@ -220,7 +235,7 @@ function Doctors() {
                       to={`/doctors/${doc._id}`}
                       className="block text-center w-full py-2 bg-sky-600 hover:bg-sky-700 dark:bg-sky-600 dark:hover:bg-sky-500 text-white text-xs font-semibold rounded-lg transition"
                     >
-                      View Profile & Book
+                      {doc.approved ? "View Profile & Book" : "View Profile"}
                     </Link>
                   </div>
                 </div>

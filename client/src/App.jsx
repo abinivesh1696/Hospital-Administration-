@@ -23,8 +23,22 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/doctors" element={<Doctors />} />
-      <Route path="/doctors/:id" element={<DoctorDetails />} />
+      <Route
+        path="/doctors"
+        element={
+          <ProtectedRoute allowedRoles={["patient", "doctor", "admin"]}>
+            <Doctors />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/doctors/:id"
+        element={
+          <ProtectedRoute allowedRoles={["patient", "doctor", "admin"]}>
+            <DoctorDetails />
+          </ProtectedRoute>
+        }
+      />
       
       {/* Auth Routes */}
       <Route path="/login" element={<Login />} />
