@@ -13,15 +13,16 @@ const bookAppointment = async (req, res) => {
       return res.status(400).json({ message: "Please provide all required fields" });
     }
 
-    // Verify doctor exists and is approved
+    // Verify doctor user exists
     const doctorUser = await User.findById(doctor);
     if (!doctorUser || doctorUser.role !== "doctor") {
       return res.status(404).json({ message: "Doctor not found" });
     }
 
+    // Verify doctor profile exists
     const doctorProfile = await Doctor.findOne({ userId: doctor });
-    if (!doctorProfile || !doctorProfile.approved) {
-      return res.status(400).json({ message: "This doctor is not available for appointments" });
+    if (!doctorProfile) {
+      return res.status(400).json({ message: "Doctor profile is incomplete" });
     }
 
     const appointment = await Appointment.create({
