@@ -191,34 +191,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 sm:p-8 shadow-sm">
-              <div className="flex items-center space-x-3 mb-5">
-                <div className="p-3 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400">
-                  <FiUserPlus className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">Add a Doctor</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Admin users can create a new doctor profile in the dashboard.</p>
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-dashed border-emerald-200 dark:border-emerald-900 bg-white/70 dark:bg-slate-900/40 p-4 text-sm text-slate-600 dark:text-slate-300">
-                <p className="font-semibold text-slate-900 dark:text-white mb-2">Sample doctor entry</p>
-                <p>Name: Dr. Meera Sharma</p>
-                <p>Specialization: Cardiology</p>
-                <p>Fee: $50 | Hospital: SmartCare Central</p>
-                <p className="mt-2 text-xs text-slate-400">This mirrors the form in Dashboard &gt; Manage Doctors.</p>
-              </div>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link
-                  to="/dashboard?tab=doctors"
-                  className="inline-flex items-center px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold transition"
-                >
-                  Open Add Doctor Panel
-                </Link>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
