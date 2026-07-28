@@ -148,7 +148,7 @@ function Home() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Quick Booking and Doctor Setup</h2>
             <p className="mt-4 text-base text-slate-500 dark:text-slate-400">
-              Use the booking path to schedule an appointment, or open the admin panel to add and manage doctor profiles...
+              Use the booking path to schedule an appointment, or open the admin panel to add and manage doctor profiles.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ function Home() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white">Book a Doctor</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Select a specialist and reserve a consultation slot...</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Select a specialist and reserve a consultation slot.</p>
                 </div>
               </div>
 
@@ -171,7 +171,7 @@ function Home() {
                 </div>
                 <div className="flex items-start space-x-3">
                   <span className="mt-1 w-2 h-2 rounded-full bg-sky-500"></span>
-                  <span>Open a doctor profile to enter date, time, and symptoms...</span>
+                  <span>Open a doctor profile to enter date, time, and symptoms.</span>
                 </div>
               </div>
 
