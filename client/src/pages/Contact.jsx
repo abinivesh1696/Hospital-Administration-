@@ -30,7 +30,7 @@ function Contact() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white">Get in Touch</h1>
             <p className="mt-4 text-lg text-slate-500 dark:text-slate-400">
-              Have questions about appointment booking, hospital registrations, or administrative approval?
+               Do You Have questions about appointment booking, hospital registrations, or administrative approval?
             </p>
           </div>
 
