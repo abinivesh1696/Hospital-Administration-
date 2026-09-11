@@ -31,7 +31,7 @@ function About() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white">About SmartCare HMS</h1>
             <p className="mt-4 text-lg text-slate-500 dark:text-slate-400">
-              <h2 className="font-bold"> Hospital Management System  </h2> We bridge the gap between patients and specialized physicians, providing a high Healthcare digital environment for scheduling consultation checkup.
+              <h2 className="font-bold"> Hospital Management System HMS </h2> We bridge the gap between patients and specialized physicians, providing a high Healthcare digital environment for scheduling consultation checkup.
             </p>
           </div>
 
